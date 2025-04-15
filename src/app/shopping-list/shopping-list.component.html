@@ -1,0 +1,11 @@
+<h2>Exe 2: Lista de Compras</h2>
+    
+    @if (items.length > 0) {
+      <ul>
+        @for (item of items; track $index) {
+          <li>{{ $index + 1 }}. {{ item }}</li>
+        }
+      </ul>
+    } @else {
+      <p>Nenhum item na lista</p>
+    }

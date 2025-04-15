@@ -1,0 +1,30 @@
+<div class="order-status-container">
+    <h2>Exe 5: Status do Pedido</h2>
+    
+    <div class="status-control">
+      <label for="status-select">Alterar Status:</label>
+      <select id="status-select" [(ngModel)]="status" class="status-dropdown">
+        <option value="pendente">Pendente</option>
+        <option value="enviado">Enviado</option>
+        <option value="entregue">Entregue</option>
+        <option value="outro">Outro</option>
+      </select>
+    </div>
+    
+    <div class="status-message">
+      @switch (status) {
+        @case ("pendente") {
+          <p class="status-pendente">⏳ Aguardando confirmação</p>
+        }
+        @case ("enviado") {
+          <p class="status-enviado">🚚 Pedido a caminho</p>
+        }
+        @case ("entregue") {
+          <p class="status-entregue">✅ Pedido entregue</p>
+        }
+        @default {
+          <p class="status-desconhecido">❓ Status desconhecido</p>
+        }
+      }
+    </div>
+  </div>

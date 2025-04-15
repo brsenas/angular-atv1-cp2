@@ -1,0 +1,13 @@
+<div class="user-list-container">
+    <h2>Exe 6: Lista de Usuários</h2>
+    
+    <div class="user-list">
+      @for (usuario of usuarios; track usuario.nome) {
+        <div class="user-card">
+          <p>Nome: {{ usuario.nome }}, Idade: {{ usuario.idade }}</p>
+        </div>
+      } @empty {
+        <p class="empty-message">Nenhum usuário cadastrado</p>
+      }
+    </div>
+  </div>

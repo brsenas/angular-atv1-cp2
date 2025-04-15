@@ -1,0 +1,18 @@
+<div class="age-verification">
+    <h2>Exe 3: Verificação de Idade</h2>
+    
+    <div class="age-display">
+      <p>Sua idade: {{ age }}</p>
+      
+      @if (age >= 18) {
+        <p class="access-granted">Acesso permitido</p>
+      } @else {
+        <p class="access-denied">Acesso negado</p>
+      }
+    </div>
+    
+    <div class="buttons">
+      <button (click)="increaseAge()">Aumentar Idade</button>
+      <button (click)="decreaseAge()">Diminuir Idade</button>
+    </div>
+  </div>

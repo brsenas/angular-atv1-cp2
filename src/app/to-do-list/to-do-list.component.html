@@ -1,0 +1,17 @@
+<div class="to-do-list-container">
+    <h2>Exe 4: Lista de Tarefas</h2>
+    
+    <div class="task-list">
+      @for (task of tasks; track $index) {
+        <div class="task-item">
+          <span>{{ task }}</span>
+          <button (click)="removeTask($index)" class="remove-btn">
+            Remover
+          </button>
+        </div>
+
+      } @empty {
+        <p class="empty-message">Nenhuma tarefa pendente</p>
+      }
+    </div>
+  </div>

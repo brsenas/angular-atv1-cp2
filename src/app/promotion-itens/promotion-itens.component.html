@@ -1,0 +1,16 @@
+<div class="promotion-itens-container">
+    <h2>Exe 9: Produtos em Promoção</h2>
+    
+    <ul>
+        @for (product of products; track product.name) {
+          <li [class.promocao]="product.promotion">
+            {{ product.name }} - R$ {{ product.price }}
+            @if (product.promotion) {
+              <span class="tag-promocao">PROMOÇÃO!</span>
+            }
+          </li>
+        } @empty {
+          <p>Nenhum produto cadastrado</p>
+        }
+      </ul>
+  </div>
